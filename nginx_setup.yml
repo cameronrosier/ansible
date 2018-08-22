@@ -3,16 +3,19 @@
   tasks:
     - name: Ensure nginx is installed and up-to-date
       yum:
+        become: yes
         name: nginx
         state: latest
         
 
     - name: Start and enable nginx
       service:
+        become: yes
         name: nginx
         state: started
     
     - name: Install apache webserver
       yum:
+        become: yes
         name: httpd
         state: latest
