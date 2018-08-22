@@ -11,3 +11,8 @@
       service:
         name: nginx
         state: started
+    
+    - name: Install apache webserver
+      yum:
+        name: httpd
+        state: latest
